@@ -2,7 +2,7 @@ import 'hourly_forecast_model.dart';
 
 class Forecast {
   final List<HourlyForecast> items;
-  final int timezone; // ⬅️ Add this
+  final int timezone; // to get the timezone of the location searched
 
   Forecast({
     required this.items,

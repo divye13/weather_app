@@ -10,7 +10,6 @@ class HourlyForecast extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final hourlyData = forecast.items.take(6).toList(); // next 6 time slots
-    // final timezoneOffset = forecast.timezone; // in seconds
 
     return SizedBox(
       height: 120,

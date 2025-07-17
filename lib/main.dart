@@ -17,8 +17,8 @@ class WeatherApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final apiService = WeatherApiService(openWeatherApiKey);
-    final weatherRepository = WeatherRepository(apiService);
+    final apiService = WeatherApiService(openWeatherApiKey); //api key is called from here
+    final weatherRepository = WeatherRepository(apiService); //repository is called from here
 
     return MultiRepositoryProvider(
       providers: [
@@ -37,7 +37,6 @@ class WeatherApp extends StatelessWidget {
                 isUtc: true,
               );
               final isNight = localTime.hour < 6 || localTime.hour > 18;
-              // print(localTime);
               backgroundColor = WeatherBackground.getBackgroundColor(
                 weather.main,
                 isNight,

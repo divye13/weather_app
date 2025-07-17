@@ -7,13 +7,13 @@ import 'package:weather/data/models/air_quality_model.dart';
 class WeatherApiService {
   final String apiKey;
 
-  WeatherApiService(this.apiKey);
+  WeatherApiService(this.apiKey); //constructor
 
   final String baseUrl = 'https://api.openweathermap.org/data/2.5';
 
   Future<CurrentWeather> fetchCurrentWeather(String city) async {
     final url = Uri.parse('$baseUrl/weather?q=$city&units=metric&appid=$apiKey');
-    final response = await http.get(url);
+    final response = await http.get(url); //url is used to fetch the information from the web with the help of REST API
 
     if (response.statusCode == 200) {
       return CurrentWeather.fromJson(jsonDecode(response.body));

@@ -10,6 +10,6 @@ class CityStorage {
 
   Future<String> loadCity() async {
     final prefs = await SharedPreferences.getInstance();
-    return prefs.getString(_key) ?? 'Delhi'; 
+    return prefs.getString(_key) ?? 'Delhi'; //initial city to show the weather 
   }
 }

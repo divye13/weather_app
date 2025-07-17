@@ -1,4 +1,3 @@
-// lib/data/models/air_quality_model.dart
 class AirQuality {
   final int aqi;
 
